@@ -1,0 +1,60 @@
+body {
+  background-color: #000208;
+  margin: 5%;
+}
+
+.container {
+  height: 600px; /* Hier die gewünschte Höhe des Containers festlegen */
+}
+
+.first-row {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  margin: 0 auto;
+  margin-bottom: 5%;
+}
+
+.second-row {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  margin: 0 auto;
+  margin-bottom: 5%;
+}
+
+.third-row {
+  display: flex;
+  justify-content: space-between;
+  width: 85%;
+  margin: 0 auto;
+}
+
+.box {
+  box-sizing: border-box;
+  height: 100%;
+  border-radius: 10px;
+}
+
+.small {
+  width: 30%;
+  height: 30%;
+  background-color: rgb(24, 21, 21)
+}
+
+.mid {
+  width: 30%;
+  height: 40%;
+  background-color: rgb(24, 21, 21);
+}
+
+.big {
+  width: 65%;
+  height: 40%;
+  background-color: rgb(24, 21, 21)
+}
+
+.Select-menu {
+  background-color: rgb(24, 21, 21);
+  color: black;
+}

@@ -1,9 +1,14 @@
 from dash import Dash, dcc, html
 import dash_bootstrap_components as dbc
+import plotly.graph_objects as go
 import plotly.express as px
-from data.clean_data import neutor_weekday
+import os
+import sys
+sys.path.append(os.path.dirname(os.getcwd()))
+from data.clean_data import neutor_weekday, neutor_last_week
 
 df_neutor_weekday = neutor_weekday()
+df_neutor_last_week = neutor_last_week()
 
 # Iris bar figure
 def drawFigure():
@@ -24,6 +29,45 @@ def drawFigure():
             ])
         ),  
     ])
+    
+def drawFigure_sec():
+    fig = go.Figure()
+
+    fig.add_trace(
+        go.Bar(
+            name='SE',
+            x=df_neutor_last_week['Datum'],
+            y=df_neutor_last_week['Neutor FR stadteinwärts'],
+            offsetgroup=0
+        )
+    )
+    fig.add_trace(
+        go.Bar(
+            name='SA',
+            x=df_neutor_last_week['Datum'],
+            y=df_neutor_last_week['Neutor FR stadtauswärts'],
+            offsetgroup=0,
+            base=df_neutor_last_week['Neutor FR stadteinwärts']
+        )
+    )
+    
+    return html.Div([
+        dbc.Card(
+            dbc.CardBody([
+                dcc.Graph(
+                    figure=fig.update_layout(
+                        template='plotly_dark',
+                        plot_bgcolor='rgba(0, 0, 0, 0)',
+                        paper_bgcolor='rgba(0, 0, 0, 0)',
+                    ),
+                    config={
+                        'displayModeBar': False
+                    }
+                ) 
+            ])
+        ),  
+    ])
+
 
 # Text field
 def drawText():
@@ -36,9 +80,6 @@ def drawText():
             ])
         ),
     ])
-
-# Data
-df = px.data.iris()
 
 # Build App
 app = Dash(external_stylesheets=[dbc.themes.SLATE])
@@ -72,7 +113,7 @@ app.layout = html.Div([
             html.Br(),
             dbc.Row([
                 dbc.Col([
-                    drawFigure()
+                    drawFigure_sec()
                 ], width=7),
                 dbc.Col([
                     drawFigure()
