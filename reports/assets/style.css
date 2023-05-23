@@ -4,30 +4,46 @@ body {
 }
 
 .container {
-  height: 600px; /* Hier die gewünschte Höhe des Containers festlegen */
+  height: 600px;
 }
 
 .first-row {
   display: flex;
-  justify-content: space-between;
-  width: 85%;
-  margin: 0 auto;
-  margin-bottom: 5%;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 3.5vh;
 }
 
 .second-row {
   display: flex;
-  justify-content: space-between;
-  width: 85%;
-  margin: 0 auto;
-  margin-bottom: 5%;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 3.5vh;
 }
 
 .third-row {
   display: flex;
-  justify-content: space-between;
-  width: 85%;
-  margin: 0 auto;
+  justify-content: center;
+  width: 100%;
+  margin-bottom: 3.5vh;
+}
+
+.first-row > .box,
+.second-row > .box,
+.third-row > .box {
+  margin-right: 2vh;
+}
+
+.first-row > .box:first-child,
+.second-row > .box:first-child,
+.third-row > .box:first-child {
+  margin-left: 0;
+}
+
+.first-row > .box:last-child,
+.second-row > .box:last-child,
+.third-row > .box:last-child {
+  margin-right: 0;
 }
 
 .box {
@@ -37,24 +53,31 @@ body {
 }
 
 .small {
-  width: 30%;
-  height: 30%;
-  background-color: rgb(24, 21, 21)
+  width: 300px;
+  height: 100px;
+  background-color: rgb(24, 21, 21);
+  margin-left: 2.5vh;
 }
 
 .mid {
-  width: 30%;
-  height: 40%;
+  width: 300px;
+  height: 450px;
   background-color: rgb(24, 21, 21);
+  margin-left: 2vh;
 }
 
 .big {
-  width: 65%;
-  height: 40%;
-  background-color: rgb(24, 21, 21)
+  width: 700px;
+  height: 450px;
+  background-color: rgb(24, 21, 21);
 }
 
-.Select-menu {
-  background-color: rgb(24, 21, 21);
-  color: black;
+@media screen and (min-width: 800px) {
+  .first-row,
+  .second-row,
+  .third-row {
+    width: 85%;
+    margin-left: auto;
+    margin-right: auto;
+  }
 }
