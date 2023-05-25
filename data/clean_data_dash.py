@@ -6,7 +6,7 @@ from pathlib import Path
 def load_data():
     script_directory = Path.cwd()
     parent_directory = script_directory.parent
-    file_path = parent_directory / 'src' / 'Zaehlstelle_Neutor_2020_Stundenauswertung.xlsx'
+    file_path = parent_directory / 'Bachelorthesis' / 'src' / 'Zaehlstelle_Neutor_2020_Stundenauswertung.xlsx'
     neutor_xlsx = pd.read_excel(file_path, 
                                 sheet_name=None, 
                                 skiprows=2,
