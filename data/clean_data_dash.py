@@ -1,9 +1,13 @@
 import pandas as pd
 from dateutil.relativedelta import relativedelta
 from datetime import datetime, timedelta, date
+from pathlib import Path
 
 def load_data():
-    neutor_xlsx = pd.read_excel('/Users/danielzellner/Documents/Studium/Bachelorthesis/src/Zaehlstelle_Neutor_2020_Stundenauswertung.xlsx', 
+    script_directory = Path.cwd()
+    parent_directory = script_directory.parent
+    file_path = parent_directory / 'src' / 'Zaehlstelle_Neutor_2020_Stundenauswertung.xlsx'
+    neutor_xlsx = pd.read_excel(file_path, 
                                 sheet_name=None, 
                                 skiprows=2,
                                 skipfooter=1,
