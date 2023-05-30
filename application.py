@@ -16,6 +16,7 @@ max_time = df_neutor.groupby('Zeit')['Neutor'].mean().idxmax()
 formatted_time = max_time.strftime("%H:%M")
 
 app = dash.Dash(__name__)
+application = app.server 
 
 app.layout = html.Div(
         children=[
@@ -91,14 +92,14 @@ app.layout = html.Div(
                 html.Div(
                     className='box small',
                     children=[
-                        html.H6(children='Max Durchschnitt Verkehr Std',
+                        html.H6(children='Uhrzeit max. Verkehr/Std',
                                 style={
                                     'textAlign': 'center',
                                     'color': 'white',
                                     'margin-top': '10px',
                                     'fontSize': 18
                                 }),
-                        html.P(df_neutor.groupby('Zeit')['Neutor'].mean().max().round(0),
+                        html.P(df_neutor.groupby('Zeit')['Neutor'].mean().max().round(),
                                 style={
                                     'textAlign': 'center',
                                     'color': 'white',
@@ -215,4 +216,4 @@ def update_figure(selected_column):
     return fig
 
 if __name__ == '__main__':
-    app.run_server(debug=True)
+    application.run(debug=True)
