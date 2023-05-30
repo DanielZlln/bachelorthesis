@@ -40,7 +40,7 @@ app.layout = html.Div(
                 html.Div(
                     className='box small',
                     children=[
-                        html.H6(children='Max Verkehr Tag',
+                        html.H6(children='Max. Verkehr Tag',
                                 style={
                                     'textAlign': 'center',
                                     'color': 'white',
@@ -66,7 +66,7 @@ app.layout = html.Div(
                 html.Div(
                     className='box small',
                     children=[
-                        html.H6(children='Min Verkehr Tag',
+                        html.H6(children='Min. Verkehr Tag',
                                 style={
                                     'textAlign': 'center',
                                     'color': 'white',
@@ -92,7 +92,7 @@ app.layout = html.Div(
                 html.Div(
                     className='box small',
                     children=[
-                        html.H6(children='Uhrzeit max. Verkehr/Std',
+                        html.H6(children='Höchster Verkehr pro Stunde',
                                 style={
                                     'textAlign': 'center',
                                     'color': 'white',
