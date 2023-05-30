@@ -1,8 +1,0 @@
-data/cleaning.ipynb
-reports/app.ipynb
-reports/test.ipynb
-venv/
-# Elastic Beanstalk Files
-.elasticbeanstalk/*
-!.elasticbeanstalk/*.cfg.yml
-!.elasticbeanstalk/*.global.yml
