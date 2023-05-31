@@ -207,7 +207,6 @@ app.layout = html.Div(
 def update_figure(selected_column):
     fig = px.box(df_neutor_weekday, x='Wochentag', y=selected_column, points='all')
     fig.update_layout(
-        colorway=["#5E0DAC", '#FF4F00', '#375CB1', '#FF7400', '#FFF400', '#FF0056'],
         plot_bgcolor='rgba(0,0,0,0)',
         template='plotly_dark',
         paper_bgcolor='rgba(0,0,0,0)',
