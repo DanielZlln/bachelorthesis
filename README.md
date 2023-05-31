@@ -11,16 +11,16 @@ Diesen Befehl im Terminal ausführen um das Repository zu clonen
 $ git clone https://github.com/DanielZlln/bachelorthesis.git
 ```
 
-### Prerequisites
+### Installing Dependencies
 
 Um die Anwendung ausführen zu können müssen alle Packages installiert werden.
 
-Info: Ich empfehle alles in einem python virtuel environment auszuführen
-unter folgendem Link ist eine Anleitung.
+Info: Ich empfehle alles in einem python virtuel environment auszuführen.
+Unter folgendem Link ist eine Anleitung.
 https://docs.python.org/3/library/venv.html
 
 ```
-pip install -r requirements.txt
+$ pip install -r requirements.txt
 ```
 
 ### Starting the Dashboard
