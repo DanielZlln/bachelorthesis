@@ -16,6 +16,7 @@ max_time = df_neutor.groupby('Zeit')['Neutor'].mean().idxmax()
 formatted_time = max_time.strftime("%H:%M")
 
 app = dash.Dash(__name__)
+# The next column is important for AWS elastic beanstalk, without it wouldnt run
 application = app.server 
 
 app.layout = html.Div(

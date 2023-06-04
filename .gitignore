@@ -1,7 +1,8 @@
-data/cleaning.ipynb
+data/cleaning_dashapp.ipynb
 reports/app.ipynb
 reports/test.ipynb
 venv/
+Bücher/
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
