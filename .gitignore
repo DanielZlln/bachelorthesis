@@ -3,6 +3,7 @@ reports/app.ipynb
 reports/test.ipynb
 venv/
 Bücher/
+src/*[~$]*
 
 # Elastic Beanstalk Files
 .elasticbeanstalk/*
